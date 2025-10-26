@@ -166,6 +166,97 @@
         </div>
       </section>
 
+      <!-- ========================================
+           Push API セクション（サーバー連携）
+           ======================================== -->
+      <section class="card push-section">
+        <h2>🔥 Push API（サーバーからのプッシュ通知）</h2>
+        <p class="subtitle-small">
+          サーバーからブラウザにプッシュ通知を送信する機能を試します
+        </p>
+
+        <!-- 購読状態 -->
+        <div class="push-status-container">
+          <div class="push-status">
+            <span>購読状態:</span>
+            <span id="push-status" class="status-badge">未購読</span>
+          </div>
+          <div class="push-info">
+            <small id="push-info-text">Service Workerを登録してください</small>
+          </div>
+        </div>
+
+        <!-- Service Worker登録・購読ボタン -->
+        <div class="push-actions">
+          <button id="register-sw" class="btn btn-primary">
+            Service Workerを登録
+          </button>
+          <button id="subscribe-push" class="btn btn-success" disabled>
+            プッシュ通知を購読
+          </button>
+          <button
+            id="unsubscribe-push"
+            class="btn"
+            style="background: #6b7280"
+            disabled
+          >
+            購読解除
+          </button>
+        </div>
+
+        <div class="push-divider"></div>
+
+        <!-- プッシュ通知送信 -->
+        <div class="push-send-section">
+          <h3>📤 サーバーからプッシュ通知を送信</h3>
+          <p class="hint">
+            💡 購読後、サーバーから通知を送信できます（全購読者に配信）
+          </p>
+
+          <div class="form-group">
+            <label for="push-title">タイトル:</label>
+            <input
+              type="text"
+              id="push-title"
+              placeholder="プッシュ通知のタイトル"
+              value="🔥 サーバーからの通知"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="push-body">メッセージ:</label>
+            <textarea id="push-body" rows="3" placeholder="通知の本文">
+サーバーからプッシュ通知が届きました！</textarea
+            >
+          </div>
+
+          <button id="send-push" class="btn btn-success">
+            サーバーから通知を送信
+          </button>
+        </div>
+
+        <!-- 説明 -->
+        <div class="push-explanation">
+          <h4>💡 Push APIとは？</h4>
+          <ul>
+            <li>
+              <strong>Service Worker</strong>
+              がバックグラウンドで動作し、サーバーからの通知を受信
+            </li>
+            <li>
+              <strong>購読（Subscribe）</strong>
+              により、ブラウザがプッシュサーバーに登録
+            </li>
+            <li>
+              <strong>PushManager.subscribe()</strong>
+              でVAPID公開鍵を使って購読オブジェクトを作成
+            </li>
+            <li>サーバーは購読オブジェクトを使ってプッシュ通知を送信</li>
+            <li>ブラウザが閉じていても通知を受け取れる（OSレベル）</li>
+          </ul>
+        </div>
+      </section>
+
       <!-- ログ表示エリア -->
       <section class="card log-section">
         <div class="log-header">

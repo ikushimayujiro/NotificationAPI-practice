@@ -2,445 +2,537 @@
    グローバルスタイル
    ======================================== */
 :root {
-    --primary-color: #3b82f6;
-    --success-color: #10b981;
-    --warning-color: #f59e0b;
-    --error-color: #ef4444;
-    --bg-color: #f3f4f6;
-    --card-bg: #ffffff;
-    --text-primary: #1f2937;
-    --text-secondary: #6b7280;
-    --border-color: #e5e7eb;
-    --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --primary-color: #3b82f6;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+  --bg-color: #f3f4f6;
+  --card-bg: #ffffff;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --border-color: #e5e7eb;
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: var(--text-primary);
-    line-height: 1.6;
-    min-height: 100vh;
-    padding: 2rem 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 2rem 1rem;
 }
 
 /* ========================================
    コンテナ
    ======================================== */
 .container {
-    max-width: 900px;
-    margin: 0 auto;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 /* ========================================
    ヘッダー
    ======================================== */
 header {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: white;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .subtitle {
-    font-size: 1.1rem;
-    opacity: 0.9;
+  font-size: 1.1rem;
+  opacity: 0.9;
 }
 
 /* ========================================
    カード
    ======================================== */
 .card {
-    background: var(--card-bg);
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    box-shadow: var(--shadow-lg);
-    transition: transform 0.2s;
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.2s;
 }
 
 .card:hover {
-    transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 .card h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--text-primary);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
 }
 
 /* ========================================
    許可状態セクション
    ======================================== */
 .permission-section {
-    border: 2px solid var(--primary-color);
+  border: 2px solid var(--primary-color);
 }
 
 .permission-status {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
 }
 
 .status-badge {
-    display: inline-block;
-    padding: 0.4rem 1rem;
-    border-radius: 20px;
-    font-weight: 600;
-    font-size: 0.9rem;
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
 .status-badge.granted {
-    background: #d1fae5;
-    color: #065f46;
+  background: #d1fae5;
+  color: #065f46;
 }
 
 .status-badge.denied {
-    background: #fee2e2;
-    color: #991b1b;
+  background: #fee2e2;
+  color: #991b1b;
 }
 
 .status-badge.default {
-    background: #fef3c7;
-    color: #92400e;
+  background: #fef3c7;
+  color: #92400e;
 }
 
 .hint {
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    font-style: italic;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-style: italic;
 }
 
 /* ========================================
    フォーム要素
    ======================================== */
 .form-group {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-    color: var(--text-primary);
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-primary);
 }
 
 .form-group input[type="text"],
 .form-group textarea,
 .form-group select {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: border-color 0.2s;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
 }
 
 .form-group input[type="text"]:focus,
 .form-group textarea:focus,
 .form-group select:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
 .form-group textarea {
-    resize: vertical;
-    font-family: inherit;
+  resize: vertical;
+  font-family: inherit;
 }
 
 .form-group small {
-    display: block;
-    margin-top: 0.25rem;
-    font-size: 0.85rem;
-    color: var(--text-secondary);
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
 }
 
 .form-group input[type="checkbox"] {
-    margin-right: 0.5rem;
-    cursor: pointer;
+  margin-right: 0.5rem;
+  cursor: pointer;
 }
 
 .form-group label:has(input[type="checkbox"]) {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    font-weight: normal;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: normal;
 }
 
 /* ========================================
    オプショングリッド
    ======================================== */
 .options-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    background: var(--bg-color);
-    border-radius: 8px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: var(--bg-color);
+  border-radius: 8px;
 }
 
 /* ========================================
    ボタン
    ======================================== */
 .btn {
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s;
-    display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-block;
 }
 
 .btn:hover {
-    transform: translateY(-1px);
-    box-shadow: var(--shadow);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
 }
 
 .btn:active {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 .btn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .btn-primary {
-    background: var(--primary-color);
-    color: white;
+  background: var(--primary-color);
+  color: white;
 }
 
 .btn-primary:hover {
-    background: #2563eb;
+  background: #2563eb;
 }
 
 .btn-success {
-    background: var(--success-color);
-    color: white;
+  background: var(--success-color);
+  color: white;
 }
 
 .btn-success:hover {
-    background: #059669;
+  background: #059669;
 }
 
 .btn-secondary {
-    background: var(--text-secondary);
-    color: white;
-    margin: 0.25rem;
+  background: var(--text-secondary);
+  color: white;
+  margin: 0.25rem;
 }
 
 .btn-secondary:hover {
-    background: var(--text-primary);
+  background: var(--text-primary);
 }
 
 .btn-small {
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
 }
 
 /* ========================================
    プリセットボタン
    ======================================== */
 .preset-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* ========================================
+   Push APIセクション
+   ======================================== */
+.push-section {
+  border: 2px solid #f59e0b;
+  background: linear-gradient(135deg, #fef3c722 0%, #fbbf2422 100%);
+}
+
+.subtitle-small {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.push-status-container {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+}
+
+.push-status {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.push-info {
+  color: var(--text-secondary);
+}
+
+.push-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.push-divider {
+  height: 1px;
+  background: var(--border-color);
+  margin: 1.5rem 0;
+}
+
+.push-send-section {
+  margin-top: 1rem;
+}
+
+.push-send-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.push-explanation {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  border-left: 4px solid #f59e0b;
+}
+
+.push-explanation h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.push-explanation ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.push-explanation li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.push-explanation li:before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #f59e0b;
+  font-weight: bold;
+}
+
+.push-explanation strong {
+  color: var(--primary-color);
 }
 
 /* ========================================
    ログセクション
    ======================================== */
 .log-section {
-    background: #1f2937;
-    color: white;
+  background: #1f2937;
+  color: white;
 }
 
 .log-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
 .log-header h2 {
-    color: white;
-    margin: 0;
+  color: white;
+  margin: 0;
 }
 
 .log-container {
-    background: #111827;
-    border-radius: 8px;
-    padding: 1rem;
-    max-height: 400px;
-    overflow-y: auto;
-    font-family: 'Courier New', monospace;
-    font-size: 0.9rem;
+  background: #111827;
+  border-radius: 8px;
+  padding: 1rem;
+  max-height: 400px;
+  overflow-y: auto;
+  font-family: "Courier New", monospace;
+  font-size: 0.9rem;
 }
 
 .log-empty {
-    color: #6b7280;
-    text-align: center;
-    font-style: italic;
+  color: #6b7280;
+  text-align: center;
+  font-style: italic;
 }
 
 .log-entry {
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
-    border-left: 3px solid;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 4px;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-left: 3px solid;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
 }
 
 .log-entry.info {
-    border-color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 .log-entry.success {
-    border-color: var(--success-color);
+  border-color: var(--success-color);
 }
 
 .log-entry.warning {
-    border-color: var(--warning-color);
+  border-color: var(--warning-color);
 }
 
 .log-entry.error {
-    border-color: var(--error-color);
+  border-color: var(--error-color);
 }
 
 .log-timestamp {
-    color: #9ca3af;
-    font-size: 0.8rem;
-    margin-right: 0.5rem;
+  color: #9ca3af;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
 }
 
 .log-message {
-    color: #e5e7eb;
+  color: #e5e7eb;
 }
 
 /* ========================================
    学習リソース
    ======================================== */
 .resources {
-    background: linear-gradient(135deg, #667eea22 0%, #764ba222 100%);
+  background: linear-gradient(135deg, #667eea22 0%, #764ba222 100%);
 }
 
 .resources ul {
-    list-style: none;
-    padding-left: 0;
+  list-style: none;
+  padding-left: 0;
 }
 
 .resources li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid var(--border-color);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .resources li:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .resources a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .resources a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* ========================================
    レスポンシブデザイン
    ======================================== */
 @media (max-width: 768px) {
-    body {
-        padding: 1rem 0.5rem;
-    }
+  body {
+    padding: 1rem 0.5rem;
+  }
 
-    header h1 {
-        font-size: 2rem;
-    }
+  header h1 {
+    font-size: 2rem;
+  }
 
-    .card {
-        padding: 1rem;
-    }
+  .card {
+    padding: 1rem;
+  }
 
-    .options-grid {
-        grid-template-columns: 1fr;
-    }
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .preset-buttons {
-        flex-direction: column;
-    }
+  .preset-buttons {
+    flex-direction: column;
+  }
 
-    .preset-buttons .btn {
-        width: 100%;
-    }
+  .preset-buttons .btn {
+    width: 100%;
+  }
 
-    .permission-status {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  .permission-status {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 /* ========================================
    スクロールバーのスタイル（Webkit）
    ======================================== */
 .log-container::-webkit-scrollbar {
-    width: 8px;
+  width: 8px;
 }
 
 .log-container::-webkit-scrollbar-track {
-    background: #1f2937;
+  background: #1f2937;
 }
 
 .log-container::-webkit-scrollbar-thumb {
-    background: #4b5563;
-    border-radius: 4px;
+  background: #4b5563;
+  border-radius: 4px;
 }
 
 .log-container::-webkit-scrollbar-thumb:hover {
-    background: #6b7280;
+  background: #6b7280;
 }
 
 /* ========================================
    アニメーション
    ======================================== */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .card {
-    animation: fadeIn 0.3s ease-out;
+  animation: fadeIn 0.3s ease-out;
 }
 
 .log-entry {
-    animation: fadeIn 0.2s ease-out;
+  animation: fadeIn 0.2s ease-out;
 }
-
